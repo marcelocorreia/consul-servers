@@ -15,7 +15,7 @@ hashicorp:
   apps:
     - name: consul
       state: present
-      version: 0.8.0
+      version: 1.0.0
     - name: consul-template
       state: present
-      version: 0.18.2
+      version: 0.19.4
