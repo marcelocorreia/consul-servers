@@ -1,0 +1,1 @@
+export BIND_IP=$(ifconfig {{ consul.iface }} | grep "inet addr" | awk '{ print substr($2,6) }')
