@@ -36,7 +36,7 @@
 - name: Joins Consul bootstrap
   command: consul join {{consul.bootstrap_server}}
   ignore_errors: true
-  when: inventory_hostname != "{{consul.bootstrap_server_public}}"
+  when: inventory_hostname != "{{consul.bootstrap_server_public}}" && inventory_hostname != "{{consul.bootstrap_server}}"
 
 - name: Setup NGINX
   template:
