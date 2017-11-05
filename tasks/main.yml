@@ -33,10 +33,10 @@
 - name: Wait for Consul to come up...
   command: sleep 2
 
-- name: Joins Consul bootstrap
-  command: consul join {{consul.bootstrap_server}}
-  ignore_errors: true
-  when: inventory_hostname != "{{consul.bootstrap_server_public}}" && inventory_hostname != "{{consul.bootstrap_server}}"
+#- name: Joins Consul bootstrap
+#  command: consul join {{consul.bootstrap_server}}
+#  ignore_errors: true
+#  when: inventory_hostname != "{{consul.bootstrap_server_public}}" && inventory_hostname != "{{consul.bootstrap_server}}"
 
 - name: Setup NGINX
   template:
